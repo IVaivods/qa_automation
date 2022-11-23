@@ -1,3 +1,4 @@
+import lv.acodemy.constants.Generic;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -5,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
+import static lv.acodemy.constants.Generic.GOOGLE_URL;
 
 public class TestChrome {
 
@@ -18,7 +21,7 @@ public class TestChrome {
 
     @Test
     public void chromeTest() {
-        driver.get("https://www.google.lv/?hl=en");
+        driver.get(GOOGLE_URL);
 
         WebElement acceptButton = driver.findElement(By.xpath("//button//div[contains(text(), 'Accept all')]"));
         acceptButton.click();
